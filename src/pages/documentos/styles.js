@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
     marginTop: Platform.OS === "ios" ? 0 : 50,
     justifyContent: "center",
     alignItems: "center",
+    paddingBottom: 90,
   },
   header: {
     fontSize: fonts.xl,

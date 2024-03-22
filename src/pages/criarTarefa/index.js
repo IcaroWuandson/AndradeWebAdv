@@ -56,7 +56,7 @@ export default function CriarTarefa() {
     try {
       const { data, error } = await supabase.from("tasks").insert({
         assignee,
-        date,
+        date: selectedDate,
         location,
         client,
         horario,
@@ -84,7 +84,7 @@ export default function CriarTarefa() {
   const dismissKeyboard = () => {
     Keyboard.dismiss();
   };
-
+  console.log(selectedDate);
   return (
     <SafeAreaView style={styles.container}>
       <TouchableOpacity onPress={dismissKeyboard}>
